@@ -23,14 +23,12 @@
 // x row index (current)
 // y colument index (current)
 
-/*
-*
-*
-*
-*
-*/
-
-
+// Break problem in smaller sub - problems
+// |>|>|>|>|v|
+// |^|>|>|v|v|
+// |^|>|v|v|v|
+// |^|^|<|<|v|
+// |^|<|<|<|<|
 
 // top row
 function move_right(n, k, M, i, j){
