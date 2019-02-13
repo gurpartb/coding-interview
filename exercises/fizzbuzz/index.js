@@ -12,30 +12,28 @@
 //   4
 //   buzz
 
+function fizzBuzz(n) {
+  for(i = 1; i <= n; i++){
+    var s = ((i%3) ? '':'fizz')+((i%5) ? '':'buzz');
+    console.log((s.length) ? s:i);
+  }
+}
+
+module.exports = fizzBuzz;
+
 // function fizzBuzz(n) {
 //   for(i = 1; i <= n; i++){
-//     var s = !(i % 3) ? 'fizz':'';
-//     s += !(i % 5) ? 'buzz':'';
-//     s = !s.length ? i:s;
+//     var s = '';
+//     if(!(i%3+i%5)){
+//       s = 'fizzbuzz';
+//     }else if(!(i%3)){
+//       s = 'fizz'
+//     } else if(!(i%5)){
+//       s = 'buzz';
+//     } else {
+//       s = i
+//     }
 //     console.log(s);
 //   }
 // }
-//
 // module.exports = fizzBuzz;
-
-function fizzBuzz(n) {
-  for(i = 1; i <= n; i++){
-    var s = '';
-    if(!(i%3) && !(i%5)){
-      s = 'fizzbuzz';
-    }else if(!(i%3)){
-      s = 'fizz'
-    } else if(!(i%5)){
-      s = 'buzz';
-    } else {
-      s = i
-    }
-    console.log(s);
-  }
-}
-module.exports = fizzBuzz;
