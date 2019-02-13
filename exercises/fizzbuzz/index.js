@@ -13,13 +13,28 @@
 //   buzz
 
 function fizzBuzz(n) {
-  for(i = 1; i <= n; i++){
-    var s = ((i%3) ? '':'fizz')+((i%5) ? '':'buzz');
-    console.log((s.length) ? s:i);
+  if(n <= 0){
+      return;
   }
+
+  fizzBuzz(n-1);
+
+  let str = (n%3) ? '' : 'fizz';
+  str += (n%5) ? '' : 'buzz';
+
+  console.log(str || n);
 }
 
 module.exports = fizzBuzz;
+
+// function fizzBuzz(n) {
+//   for(i = 1; i <= n; i++){
+//     var s = ((i%3) ? '':'fizz')+((i%5) ? '':'buzz');
+//     console.log((s.length) ? s:i);
+//   }
+// }
+
+// module.exports = fizzBuzz;
 
 // function fizzBuzz(n) {
 //   for(i = 1; i <= n; i++){
