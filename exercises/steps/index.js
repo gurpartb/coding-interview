@@ -17,6 +17,15 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// function steps(n){
+//   for(i = 1; i<= n; i++)
+//     console.log(''.padEnd(i, '#')+''.padEnd(n-i,' '));
+// }
+
+function steps(n, i = 1){
+  if(i > n) return;
+  console.log(''.padStart(i,'#')+''.padEnd(n-i,' '));
+  steps(n, i+1);
+}
 
 module.exports = steps;
