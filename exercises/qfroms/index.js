@@ -26,18 +26,22 @@ class Queue {
         while(this.stackPrimary.peek()){
             this.stackHelper.push(this.stackPrimary.pop());
         }
-        this.stackPrimary.push(record);
+        this.stackHelper.push(record);
+    }
+
+    remove(){
         // push everything to stackPrimary
         while(this.stackHelper.peek()){
             this.stackPrimary.push(this.stackHelper.pop());
         }
-    }
-
-    remove(){
         return this.stackPrimary.pop();
     }
 
     peek(){
+        // push everything to stackPrimary
+        while(this.stackHelper.peek()){
+            this.stackPrimary.push(this.stackHelper.pop());
+        }
         return this.stackPrimary.peek();
     }
 }
