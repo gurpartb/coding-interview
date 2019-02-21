@@ -31,9 +31,10 @@ class Queue {
 
     remove(){
         // push everything to stackPrimary
-        while(this.stackHelper.peek()){
-            this.stackPrimary.push(this.stackHelper.pop());
-        }
+        // while(this.stackHelper.peek()){
+        //     this.stackPrimary.push(this.stackHelper.pop());
+        // }
+        this.peek();
         return this.stackPrimary.pop();
     }
 
