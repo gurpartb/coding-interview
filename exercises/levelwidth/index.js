@@ -11,6 +11,28 @@
 // 4       5
 // Answer: [1, 3, 2]
 
-function levelWidth(root) {}
+function levelWidth(root) {
+    const width = []
+
+    let arr = [root];
+    width.push(arr.length)
+
+    // Similar to BFS
+    while(arr.length){
+        let arr2 = [];
+
+        while(arr.length){
+            let node = arr.shift();
+            arr2.push(...node.children)
+        }
+
+        arr = arr2;
+        width.push(arr.length);
+    }
+    // remove '0' from the last spot in width[]
+    width.pop();
+
+    return width;
+}
 
 module.exports = levelWidth;
